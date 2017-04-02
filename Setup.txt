@@ -1,0 +1,6 @@
+sudo apt - get install build - essential
+Install VBOX linuxaddition.run
+
+sudo ./VBoxLinuxAdditions.run
+
+sudo apt - get install eclipse

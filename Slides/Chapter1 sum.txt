@@ -1,0 +1,21 @@
+what is system software ?
+	It is a type of computer program that interacts with the hardware 
+	Includes:
+	Operating systems 
+	utility software- analyse stuff 
+	Device drivers - manage BIOS
+	user interface - GUI 
+	
+
+What is Operating system ?
+	how many parts?
+	Hardware 
+	Operating system 
+	Application programs and Users
+
+OS manages all resources and its a control program 
+Kerenl is the one program running all the time 
+
+Bootstap aslo know as firmwate is stopred in EPROM and load 
+operating system and start execution 
+

@@ -1,0 +1,34 @@
+Main memory 
+	binding of instructions can happen at 3 different stages 
+		1. Compile time 
+		2.Load time
+		3.Execution time
+		
+	Backing store:
+		A process is removed from the main memory and stored in this space 
+		and brought back when needed to execute 
+		
+	Main memory usualy into 2 parts 
+		Resident operating system - low memory 
+		User process high memory 
+		Limit and base register
+		
+	Fragmentaiton can be avoided by compaction 	
+		Done at execution time 
+		
+	Segmentation 
+		Breaking up a program into several parts 
+		and then storing the parts
+	
+	Segmentation Architecture 
+		<segmentation number , offset>
+	
+	Paging 
+		physical address space of a process can be non contigious 
+		avoids external fragmentation 
+		
+	Divides physical memory into frames 
+	each frame is of the same size called virtual paging 
+	page table will help convert logical into physical address
+	
+	

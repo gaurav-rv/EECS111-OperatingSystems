@@ -1,0 +1,12 @@
+process has 
+
+Text section for code
+Data section for global variables 
+staack for temp data 
+heap for data at runtime 
+function parameters, return address and local variables 
+
+Process state , process number , program counter, register  memory limits and list of open 
+files
+
+ 

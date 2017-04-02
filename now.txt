@@ -1,0 +1,92 @@
+// EECS 111 
+// Gaurav Venkatesh
+
+
+Suppose that university wants to show off how politically correct it is by applying the U.S. Supreme Court’s “Separate but equal is inherently unequal”
+ doctrine to gender as well as race, ending its long-standing practice of gender-segregated bathrooms on campus. However, as a concession to tradition, it decrees 
+ that when a woman is in a bathroom, other woman may enter, but no men, and vice versa. A sign with a sliding marker on the door of each bathroom indicates which
+ of three possible states it is currently in:
+q  Empty
+
+q  Woman present
+
+q  Men present
+In some programming language you like, write the following procedures: woman_wants_to_enter (), man_wants_to_enter (), woman_leaves (), man_leaves ().
+
+ Simple Solution
+
+// 3 states occupied 0 = empty, occupied 1 = men, occupied -1 = female.
+
+int occupied = 0; 
+int numb = 0;
+
+woman_wants_to_enter (){
+	while(occupied > 0  ); //wait indefinitly
+	occupied = -1;
+	numb = numb ++;
+}
+
+man_wants_to_enter (){
+	while (occupied < 0 ); // wait indefintly 
+	occupied =1;
+	numb = numb ++;
+}
+
+woman_leaves (){
+	numb --;
+	if(numb == 0) occupied = 0;
+}
+
+man_leaves ().{
+	numb --;
+	if(numb == 0) occupied = 0;
+}
+
+
+
+Solution ending starvation 
+
+// 3 states occupied 0 = empty, occupied 1 = men, occupied -1 = female.
+// lets assume n to be 5, after 5 people went to the bathroom it can be used by another gender
+int occupied = 0; 
+int numb = 0;
+int n = 0;
+
+//If occupied is greater than 0 then it will wait and also increment number of wommen and varaaible n to keep track of how many wommen have already gone 
+woman_wants_to_enter (){
+	while(occupied > 0 ); //wait indefinitly
+	occupied = -1;
+	numb = numb ++;
+	n++;
+}
+//If occupied is less than 0 then it will wait and also increment number of men and varaaible n to keep track of how many men have already gone 
+man_wants_to_enter (){
+	while (occupied < 0 ); // wait indefintly 
+	occupied =1;
+	numb = numb ++;
+	n++;
+}
+
+// If n =5 then it will automatically switch it to men so no starvation 
+// if numb of men = 0; then it will turn it to 0 so that anybody can use it next 
+woman_leaves (){
+	numb --;
+	if(n >=5){
+		occupied = 1;
+		n = 0;
+	}
+	if(numb == 0) {
+	occupied = 0;
+	}
+}
+
+// If n =5 then it will automatically switch it to women so no starvation 
+// if numb of men = 0; then it will turn it to 0 so that anybody can use it next 
+man_leaves ().{ 
+	numb --;
+		if(n >=5){
+		occupied = -1; 
+		n = 0;
+	}
+	if(numb == 0) occupied = 0;
+}

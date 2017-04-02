@@ -1,0 +1,14 @@
+File System Implementation
+	resides on secondaery storage 
+	
+	File Controle block 
+		file permision 
+		file date 
+		file owner 
+		file size 
+		file data block or pointers
+		
+	Allocation methods 
+		Contigious 
+		Linkedlist 
+		indexed

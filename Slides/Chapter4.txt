@@ -1,0 +1,98 @@
+
+Process synchronization
+	
+	Biggest problem is data inconsistancy 
+	
+	Producer Consumer problem
+		Unbounded buffer - No limit to the size of the buffer so not a problem 
+		Bounded buffer- set size.
+		
+		Producer
+			
+				while(true){
+					send(next_produced);
+				}
+		
+		Consumer
+			while(true){
+				recieve (next produced);
+			}
+			
+	Circular Bounded Buffer 
+		#define buffersize 10 
+		
+		while(true){
+			while(i+1 % buffersize == out);
+			buffer[in] = next produced;
+			in = in+1 % buffer size;
+		}
+		
+		//consumer
+		while(true){
+			while(in == out) -- nothing 
+			while(in == out) -- nothing 
+			next consumer = buffer[out];
+			out = out+1 % buffer size;
+		}
+		
+	But the problem with this is that you need to worry about critical section
+	since it could be interrupted.
+	
+	Critical section is the part where the machine cant go into machine mode
+
+
+	Solving the critical section problem
+	1.Mutual Exclusion 
+		If a process is in the critical section, another process cannot disturb
+		the process
+	2. Progress
+		If there is no process executing the critical section, and if a process
+		wants to enter the critical section then there is a time limit to which it can 
+		be kept waiting 
+		
+	3.Bounded Waiting 
+		A bound must exsist on the amount of time a process is not allowed to enter 
+		the critical sectipn 
+		
+	Pre emptive
+		Anything can be interupted 
+	Non pre emptive 
+		runs till the process is completed.
+		
+		
+	Hardware solution 
+		Make the load and save instruction as a atomic instruction, they cannot be interrupted at any point of time 
+			But that is not always feasable and is not very useful 
+	
+	Software solution 
+		Mutex locks 
+		2 steps Acquire and release
+		A resource must acquire the lock and after its is completed it can release the lcok 
+	
+			Multiple instances of a resource Mutex would not work 
+			so we need another soultion called semaphore
+		
+		Semaphores
+				2 methods
+					signal and wait
+					
+				wait(s){
+					wile(s <= 0); busy wait;
+					s--;
+				}	
+				
+				signal(s){
+					s++;
+				}
+		Problem is busy waiting 
+		
+		When a process is interupted it goes back to the waiting queue
+		
+		
+		Another solution is Monitor, it makes the whole function and takes 
+		care of all neccessary locks 
+	
+		
+		
+		
+		

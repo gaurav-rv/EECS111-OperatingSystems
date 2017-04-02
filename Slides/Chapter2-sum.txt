@@ -1,0 +1,82 @@
+Chapter 2 
+
+Computer System Operation
+	I/O structure
+	
+Computer system operation:
+	I/o and CPU can execute concurently 
+	each device controler is incharge of a particular device 
+	each device has its own buffer 
+	CPU moves data from main memory to/from local buffer 
+ 	Device controller informs the CPU that it has finished its operation by 
+	raising an interrupt
+
+	Something about a n interrupt vector 
+	Operating system is interrupt driven 
+
+	A trap is a software generated interrupt caused either by error
+	or user request 
+
+	Interrupt Handling 
+	The os preserves the state of the CPU by storing the registers and 
+	the program counter on the stack 
+	
+	
+	two types polling and vectored interrupt system 
+	
+	Vectored interrupt is an I/O interrupt that tells the part of
+	the computer that handles I/O interrupts at the hardware level 
+	that requests for attention and also identifies the device that 
+	sent the request.
+
+	Polling Interrupt constantly asks each device in to see if they 
+	requested an interrupt 
+
+	
+	Synchronous Blocking
+	after I/O interrupt start control returns to the program only after I/O 
+	complettion
+	
+	Asynchronous Blocking:
+	happens simulataniously 
+
+
+	Starage Structure:
+	Main Storage is volatile and random access
+	
+	Secondary Storage
+	non Volatile 
+	
+	Magnetic Disks
+	Solid State Disk
+
+
+Hardware protection 
+	Dual mode 
+	I/O protetion
+	Memory Protectionon
+	CPU protection
+
+	Dual mode- 2 modes User mode and kernel mode 
+	I/O Protection - Priviledged Instruction 
+	Memory Protection - Base register and Limit register 
+	CPU Protection  - Timer interrupts computer after specified period to ensure
+	OS maintains control 
+	Privelidged instruction 
+
+How are Systems organized ?
+	simple  - one or two layers
+	Layered - one on top of the other each one is independent 
+	MicroKernel - Many user level process 
+	Modular - Dynamically loadable modeules
+
+	Hardware
+	Cpu scheduling 
+	I/O
+	Virtual memory 
+	Device driver and scheduler 
+	Interface Primitives 
+	User programs 
+
+
+	

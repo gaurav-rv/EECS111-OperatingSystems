@@ -1,0 +1,80 @@
+
+Process Control Block 
+Process state - new , ready , waiting , running , finished 
+
+Process state , Process number 
+Process counter - location of instructions to next execute 
+registers 
+memory limits 
+list of open files 
+
+
+Process Scheduling Queues 
+Job queue 
+Ready queue 
+Device Queue 
+Queue structures 
+
+
+Context switch
+Switchign between 2 process
+ the cpu needs to load the PCB of the other process
+ 
+ Long term scheduler 
+ Controls the degree of multiprograming 
+ 
+ code data and file are shared in multi threading
+ whereas nothing is stored in a multi process
+ 
+ while (true){
+	whileI( (( in +1 ) % buffersize ) == out )
+	buffer[in] = next produced;
+	in = (in+1) % buffersize;
+		
+	}
+	
+while(true){
+	while(in == out){};
+		nextconsumed = buffer[out];
+		out = out+1 % buffersize
+}
+
+-----------------------
+Process 
+
+has
+program cdoe - text section 
+a program counter and process registers 
+stack of temporary data 
+data section for global variables 
+heap containing memory at run time 
+
+Program is nothing but code but process is a program in execution
+
+
+5 stages to a process new , running, waiting, ready, terminated 
+
+process state process number 
+process counter
+registers memory limits 
+list of open files
+
+Thread states 
+ready , blocked runing and terminated
+
+
+
+
+--------
+
+Critical Section Problem 
+Mutual eclusion - If a process is in the critical section then not other process can acess the criticlal section 
+
+Progress - if no process is executing in its critical secition then theere 
+should be some prcocess that wishes to enter their critical section
+
+Bounded waiting 
+A process can only wait a certain number of process before it goes into the critical section
+
+
+

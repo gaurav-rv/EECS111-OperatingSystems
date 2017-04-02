@@ -1,0 +1,8 @@
+
+Polling can happen in 3 interrupt statements
+	read status
+	logical and to extract status bit 
+	branch if not zero
+	
+	DMA Direct memory access is used to acess memory by passing the CPU
+	and sending notifications to the CPU 
